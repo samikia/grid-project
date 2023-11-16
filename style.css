@@ -3,3 +3,36 @@
   padding: 0;
   box-sizing: border-box;
 }
+body{
+  font-family: sans-serif;
+
+}
+.container{
+  display: grid;
+  grid-template-rows:80vh repeat(5, max-content);
+  grid-template-columns: repeat(6, 1fr);
+}
+.header{
+  background-color:tomato ;
+ grid-column: 1 /-1;
+}
+.story{
+background-color: gold;
+grid-column: 1/-1;
+}
+.service{
+background-color: yellowgreen;
+grid-column: 1/-1;
+}
+.reserve{
+background-color: hotpink;
+grid-column: 1/-1;
+}
+.gallery{
+background-color: indigo;
+grid-column: 1/-1;
+}
+.footer{
+background-color: yellow;
+grid-column: 1/-1;
+}
