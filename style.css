@@ -3,76 +3,74 @@
   padding: 0;
   box-sizing: border-box;
 }
-body{
+body {
   font-family: sans-serif;
-
 }
-.container{
+.container {
   display: grid;
-  grid-template-rows:80vh repeat(5, max-content);
+  grid-template-rows: 80vh repeat(5, max-content);
   grid-template-columns: repeat(6, 1fr);
 }
-.header{
-  background-color:#000;
- grid-column: 1 /-1;
- background-image: linear-gradient(to bottom, #4d4c4c4f, #000), url(./pic/pic-leg.jpg);
- background-size: cover;
- display: grid;
- grid-template-rows: repeat(3, min-content);
- gap: 20px;
- justify-content: center;
- align-content: center;
- text-align: center;
+.header {
+  background-color: #000;
+  grid-column: 1 /-1;
+  background-image: linear-gradient(to bottom, #4d4c4c4f, #000),
+    url(./pic/pic-leg.jpg);
+  background-size: cover;
+  display: grid;
+  grid-template-rows: repeat(3, min-content);
+  gap: 20px;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
 }
-@media screen and (max-width:540px) {
-  .header{
+@media screen and (max-width: 540px) {
+  .header {
     background-position-x: 10%;
   }
 }
-.header-one{
-font-size: 30px;
-color: white;
-
+.header-one {
+  font-size: 30px;
+  color: white;
 }
-.header-two{
-color: white;
-text-transform: uppercase;
-font-size: 40px;
+.header-two {
+  color: white;
+  text-transform: uppercase;
+  font-size: 40px;
 }
-.header-text{
+.header-text {
   color: orange;
   text-transform: uppercase;
 }
-.header-btn{
-padding: 20px 30px;
-color: white;
-border-radius: 5px;
-background-color: orange;
-border: 1px solid orange;
-font-family: sans-serif;
-font-size: 14px;
-cursor: pointer;
-transition: all 0.4s;
-justify-self: center;
+.header-btn {
+  padding: 20px 30px;
+  color: white;
+  border-radius: 5px;
+  background-color: orange;
+  border: 1px solid orange;
+  font-family: sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.4s;
+  justify-self: center;
 }
-.header-btn:hover{
+.header-btn:hover {
   background-color: white;
   color: orange;
 }
 /* story section */
-.story{
-background-color: gold;
-grid-column: 1/-1;
+.story {
+  grid-column: 1/-1;
 }
 
-.section-title{
-text-align: center;
-padding: 25px;
-font-size: 27px;
-color: orange;
+.section-title {
+  text-align: center;
+  padding: 25px;
+  font-size: 27px;
+  color: orange;
 }
- .section-title:before,
-.section-title:after{
+.section-title:before,
+.section-title:after {
   background-color: #000;
   content: "";
   display: inline-block;
@@ -81,49 +79,73 @@ color: orange;
   vertical-align: middle;
   width: 5%;
 }
-.section-title:before{
+.section-title:before {
   right: 0.1rem;
   margin-left: -50%;
 }
-.section-title::after{
-  left:0.5rem;
+.section-title::after {
+  left: 0.5rem;
   margin-right: -50%;
 }
-.story-images{
-display: grid;
-gap: 10px;
-padding: 20px;
-grid-template-columns: repeat( auto-fit, minmax(150px, 1fr) );
+.story-images {
+  display: grid;
+  gap: 10px;
+  padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
-.image{
+.image {
   width: 100%;
   height: 250px;
   border-radius: 10px;
 }
-@media screen and (max-width:690px) {
-  .image-4{
+@media screen and (max-width: 690px) {
+  .image-4 {
     grid-column: 2 / 3;
   }
 }
-@media screen and (max-width:400px) {
-  .image-4{
+@media screen and (max-width: 400px) {
+  .image-4 {
     grid-column: auto;
   }
 }
-.service{
-background-color: yellowgreen;
-grid-column: 1/-1;
+.service {
+  grid-column: 2/6;
 }
-.reserve{
-background-color: hotpink;
-grid-column: 1/-1;
+.services-section {
+  display: grid;
+  grid-template-rows: repeat(2, 250px);
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 50px;
+  grid-auto-rows: 250px;
+  grid-row-gap: 50px;
+  padding-bottom: 70px;
 }
-.gallery{
-background-color: indigo;
-grid-column: 1/-1;
+.services-box {
 }
-.footer{
-background-color: yellow;
-grid-column: 1/-1;
+.services-img {
+  width: 100%;
+  height: 80%;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+.service-text {
+  text-align: center;
+  font-size: 19px;
+}
+.text {
+  font-size: 14px;
+  margin-top: 0.5rem;
+}
+.reserve {
+  background-color: hotpink;
+  grid-column: 1/-1;
+}
+.gallery {
+  background-color: indigo;
+  grid-column: 1/-1;
+}
+.footer {
+  background-color: yellow;
+  grid-column: 1/-1;
 }
