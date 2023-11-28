@@ -121,8 +121,6 @@ body {
   grid-row-gap: 50px;
   padding-bottom: 70px;
 }
-.services-box {
-}
 .services-img {
   width: 100%;
   height: 80%;
@@ -138,14 +136,160 @@ body {
   margin-top: 0.5rem;
 }
 .reserve {
-  background-color: hotpink;
   grid-column: 1/-1;
 }
+.reserve-section {
+  display: grid;
+  grid-template-columns: 50px repeat(4, 1fr) 50px;
+  grid-template-rows: 1fr;
+  padding: 55px;
+  text-align: center;
+  background-image: linear-gradient(to bottom, #4d4c4c4f, #000),
+    url(./pic/resturant1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+@media screen and (max-width: 525px) {
+  .reserve-section {
+    grid-template-columns: 15px repeat(4, 1fr) 15px;
+  }
+}
+.right {
+  background-color: #000000a1;
+  color: rgb(255, 255, 255);
+  grid-column: 2/3;
+  display: grid;
+  grid-template-rows: 2fr 1fr repeat(2, 0.5fr) 2fr;
+  padding: 15px;
+}
+.left-title,
+.reserve-branch {
+  color: goldenrod;
+  font-family: "Ephesis", cursive;
+}
+.parantes {
+  color: goldenrod;
+}
+.order-text {
+  font-family: "Ephesis", cursive;
+}
+.left {
+  background-color: rgba(255, 255, 255, 0.635);
+  grid-column: 3/6;
+  display: grid;
+  grid-template-rows: 0.5fr 1fr 0.5fr 2fr;
+  padding: 10px;
+}
+
+.left-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.leftbox-img {
+  width: 100%;
+  height: 120px;
+  clip-path: circle(30% at 50% 50%);
+}
+@media screen and (max-width: 675px) {
+  .reserve-section {
+    padding: 10px 0px;
+  }
+  .left {
+    font-size: 12px;
+  }
+  .right {
+    font-size: 13px;
+  }
+}
+
 .gallery {
-  background-color: indigo;
   grid-column: 1/-1;
+}
+.gallery-section{
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(3,280px);
+grid-template-areas: "gallery_4 gallery_4 gallery_1""gallery_5 gallery_2 gallery_1" "gallery_5 gallery_3 gallery_3 ";
+padding: 20px 50px;
+gap: 1rem;
+}
+@media screen and (max-width: 680px) {
+ .gallery-section{
+  grid-template-areas: "gallery_4 gallery_4""gallery_1 gallery_5""gallery_2 gallery_2" "gallery_3 gallery_3 ";
+  grid-template-columns:repeat(2,1fr) ;
+  grid-template-rows: repeat(4,280px);
+ }
+}
+.image-gallery{
+width: 100%;
+border-radius: 15px;
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+}
+.gallery1{
+background-image: url("./pic/gallery1.jpg");
+grid-area: gallery_1;
+}
+.gallery2{
+  background-image: url("./pic/gallery2.jpg");
+  grid-area: gallery_2;
+}
+.gallery3{
+  background-image: url("./pic/gallery3.jpg");
+  grid-area: gallery_3;
+}
+.gallery4{
+  background-image: url("./pic/gallery0foghi.jpg");
+  grid-area: gallery_4;
+}
+.gallery5{
+  background-image: url("./pic/gallery.amodi.jpg");
+  grid-area: gallery_5;
 }
 .footer {
-  background-color: yellow;
   grid-column: 1/-1;
+  margin: 1rem 0;
+  border-top: 1px solid black;
+  background-color: whitesmoke;
+  text-align: center;
+  gap: 7px;
+  padding: 35px;
 }
+.footer-section{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  grid-template-rows: 1fr;
+}
+ul{
+  list-style: none;
+}
+li{
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 18px;
+}
+.footer-title{
+  color: orange;
+}
+.copy{
+  margin-top: 1rem;
+  font-size: 12px;
+  text-align: center;
+}
+.copy-text{
+  color: orange;
+}
+li:hover{
+  color: orange;
+  transition: all 0.4s;
+}
+.socials:hover{
+  color: rgb(91, 91, 223);
+  transition: all 0.4s;
+}
+@media screen and (max-width: 580px) {
+  .footer-section{
+    text-align: start;
+  }
+ }
